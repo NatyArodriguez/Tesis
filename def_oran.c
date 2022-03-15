@@ -23,17 +23,18 @@
 #define     EFIC_LP             0.3 // eficiencia de larvas y pupas
 #define     MATAR_VECTORES      12.5//9.5//12.5//temp
 #define     EFECT_V             0.5 // muerte por congelamiento
-#define     NO_INFECCION        19. //15. //temp
+#define     NO_INFECCION        18. //15. //temp
+#define     NO_LATENCIA            22.9
 
 //1f6rxbns
 
 /*paramites aedes en days */
-#define     EGG_LIFE            120. // vida de los huevos [dias]
-#define     EGG_LIFE_wet        90. // vida de los huevos [dias]
+#define     EGG_LIFE            110. // vida de los huevos [dias]
+#define     EGG_LIFE_wet        80. // vida de los huevos [dias]
 
-#define     RATE_IMPORT         0.594//0.12//0.22//0.28//0.12 // 0.18
-#define     beta_day            1.552//1.*2.39//1.98//1.79 // or 0.25 or 1.19 or 0.47 or 0.5// 2.39
-#define     bite_rate           0.315//0.3//0.342//0.31//0.39//0.3875//0.39//0.3875//0.3875//16.15 // 2.59
+#define     RATE_IMPORT         0.12//0.12//0.22//0.28//0.12 // 0.18
+#define     beta_day            2.07//1.*2.39//1.98//1.79 // or 0.25 or 1.19 or 0.47 or 0.5// 2.39
+#define     bite_rate           0.29//0.3//0.342//0.31//0.39//0.3875//0.39//0.3875//0.3875//16.15 // 2.59
 
 #define     MU_MOSQUITO_JOVEN   1./2. //0.091//1./10.//0.091 // 1./2.;//0.091;
           
