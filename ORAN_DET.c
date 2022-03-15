@@ -36,8 +36,6 @@ double
 	gama, deltaI;
 
 	
-	
-	
 
 
 /* Comienza el programa */
@@ -225,9 +223,9 @@ int main(int argc,char *argv[])
 		
 		Tm			=	Tmean[count];
 		
-		media_VE	=	0.1216*Tm*Tm - 8.66*Tm + 154.79;
+		media_VE	=	1+(0.1216*Tm*Tm - 8.66*Tm + 154.79);
 		
-		var_VE		=	0.1728*Tm*Tm - 12.36*Tm + 230.62;
+		var_VE		=	1+(0.1728*Tm*Tm - 12.36*Tm + 230.62);
 		
 		sigma_V		=	1./media_VE;
 		
@@ -240,11 +238,6 @@ int main(int argc,char *argv[])
 		pob			=	v[9] + v[10] + v[11] +v[12];
 		
 		G_T[count]	=  b_theta_pV * v[6] * (v[11]/pob);
-		
-		//printf ("%d\t%.2f\n",count,G_T[count]);
-		
-		
-		
 		
 		if ( count > 3){
 			
@@ -392,6 +385,7 @@ int main(int argc,char *argv[])
 		EV 			=	sigma_V*v[7] - sigma_V*integral_1 + integral_2 - mu_V*integral_3 + integral_4;
 		
 		if ( EV < 0. ){ EV = 0.;}
+		if(Tm<NO_LATENCIA){EV=0.;}
 		
 		b_theta_pH		=	bite_rate*theta_T(Tm)*MIObh;
 		
@@ -573,3 +567,5 @@ double Fbar(double tt,double s, double k, double theta)
 	}
 	return salida;
 }
+
+
